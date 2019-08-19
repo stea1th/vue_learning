@@ -4,8 +4,11 @@
         <th:block th:include="fragments/head-tag::header"></th:block>
     </head>
     <body>
-        <div>Privet, ja First!!!</div>
-        <a th:href="@{https://board.tts.lt/}">TTS</a><br/>
+        <div id="app">
+            {{message}}
+        </div>
+        <div id="test">Hallo</div>
+        <a th:href="@{/board.tts.lt/}">TTS</a><br/>
         <a th:href="@{/}">Back</a>
     </body>
 </html>
