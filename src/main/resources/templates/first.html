@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
     <head>
         <th:block th:include="fragments/head-tag::header"></th:block>
     </head>
     <body>
         <div id="app">
             {{message}}
+        </div>
+        <div id="app1">
+            <span v-bind:title="message">
+                Наведи на меня курсор на пару секунд,
+                чтобы увидеть динамически связанное значение title!
+            </span>
+        </div>
+        <div id="app2">
+            <span v-if="seen">Сейчас меня видно</span>
+        </div>
+        <div id="app3">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+        <div id="app4">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+        </div>
+        <div id="app5">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+            <button v-on:click="addRandomNumber">Добавить число</button>
+            <button v-on:click="removeRandomNumber">{{message}}</button>
+        </div>
+        <div id="app6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+        <div id="app7">
+            <ol>
+                <todo-item v-for="item in groceryList"
+                           v-bind:todo="item"
+                           v-bind:key="item.id">
+                </todo-item>
+            </ol>
         </div>
         <div id="test">Hallo</div>
         <a th:href="@{/board.tts.lt/}">TTS</a><br/>
