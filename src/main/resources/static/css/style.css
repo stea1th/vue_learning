@@ -1,0 +1,9 @@
+.cellStyle {
+    height: 30px;
+    width: 30px;
+    border: black;
+}
+
+#chess-title {
+    color: red;
+}
