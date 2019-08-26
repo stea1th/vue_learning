@@ -1,9 +1,16 @@
-.cellStyle {
-    height: 30px;
-    width: 30px;
-    border: black;
+
+#chess-board{
+    border: 1px solid black;
 }
 
 #chess-title {
     color: red;
+}
+
+.cell.black {
+    background-color: #ba8f5e;
+}
+
+.cell.white {
+    background-color: #dcccad;
 }

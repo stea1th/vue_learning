@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <th:block th:include="fragments/head-tag::header"></th:block>
 </head>
@@ -8,15 +8,17 @@
     {{message}}
 </div>
 <div id="chess-table">
-    <table>
+    <table id="chess-board">
         <tbody>
-        <tr v-for="(column, index) in 8"
-            :key="index">
+        <tr v-for="(column, inx) in 8"
+            :key="inx">
             <template>
-                <chess-cell v-for="(cell, index) in 8"
-                            :cell="cell"
-                            v-bind:key="index"
-                            v-bind:style="cellStyle">
+                <chess-cell v-for="(cell, index) in letters"
+                            :cell="`${cell + (8 - inx)}`"
+                            :num="inx * 8 + index + 1"
+                            :inx="inx + 1"
+                            :key="index"
+                            :style="cellStyle">
                 </chess-cell>
             </template>
         </tr>
