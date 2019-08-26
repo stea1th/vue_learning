@@ -1,6 +1,11 @@
 
 #chess-board{
-    border: 1px solid black;
+    border: 3px solid #ba8f5e;
+    border-collapse: collapse;
+}
+
+tr, td {
+    border: none !important;
 }
 
 #chess-title {

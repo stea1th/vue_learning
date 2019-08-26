@@ -24,6 +24,7 @@ var chessCell = new Vue({
         cellStyle: {
             height: '50px',
             width: '50px'
+
         }
     }
 });
