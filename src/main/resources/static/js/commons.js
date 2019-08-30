@@ -1,11 +1,11 @@
 
-$(function () {
-    // $('#test').val('Hi my boy!!');
-    // console.log($('#test'));
-    $('#test').text('Hallo you boy');
-    app.message = "trubochist";
-    // console.log(app.message);
-});
+// $(function () {
+//     // $('#test').val('Hi my boy!!');
+//     // console.log($('#test'));
+//     $('#test').text('Hallo you boy');
+//     app.message = "trubochist";
+//     // console.log(app.message);
+// });
 
 var app = new Vue({
     el: '#app',

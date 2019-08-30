@@ -4,27 +4,19 @@
     <th:block th:include="fragments/head-tag::header"></th:block>
 </head>
 <body>
-<div id="chess-title">
-    {{message}}
-</div>
-<div id="chess-table">
-    <table id="chess-board">
-        <tbody>
-        <tr v-for="(column, inx) in 8"
-            :key="inx">
-            <template>
-                <chess-cell v-for="(cell, index) in letters"
-                            :cell="`${cell + (8 - inx)}`"
-                            :num="inx * 8 + index + 1"
-                            :inx="inx + 1"
-                            :key="index"
-                            :style="cellStyle">
-                </chess-cell>
-            </template>
-        </tr>
-        </tbody>
-    </table>
+<!--<div id="chess-title">-->
+    <!--{{message}}-->
+<!--</div>-->
+<div id="chess-table1">
+    <vadim></vadim>
 </div>
 
 </body>
 </html>
+<script type="text/babel">
+    // import Vadim from "../static/components/ChessBoard";
+    var Vadim = require('/static/components/ChessBoard');
+    export default {
+        components: {Vadim}
+    }
+</script>
