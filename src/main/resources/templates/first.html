@@ -5,6 +5,9 @@
         <th:block th:include="fragments/head-tag::header"></th:block>
     </head>
     <body>
+    <input  type="text" id="testInput" class="form-control">
+    <button class="btn btn-danger" onclick="getInputValue()">Click mich</button>
+
         <div id="app">
             {{message}}
         </div>

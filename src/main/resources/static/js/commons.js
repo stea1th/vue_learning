@@ -5,7 +5,17 @@ $(function () {
     $('#test').text('Hallo you boy');
     app.message = "trubochist";
     // console.log(app.message);
+
+
+
 });
+
+function getInputValue(){
+    // console.log($('#testInput').val());
+    $.post('/first/test-input', {name: $('#testInput').val()} ).done(function (data) {
+        console.log(data);
+    });
+}
 
 var app = new Vue({
     el: '#app',
@@ -98,5 +108,6 @@ var app7 = new Vue({
         ]
     }
 });
+
 
 
